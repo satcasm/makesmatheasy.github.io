@@ -83,6 +83,12 @@ $("#trimornumbtn").click(function(){
     closenav();
     clearall();
 });
+// Pronic Number
+$("#fernumbtn").click(function(){
+    openit("#fernum");
+    closenav();
+    clearall();
+});
 $("#bmi").click(function(){
     openit("#bmis");
     closenav();

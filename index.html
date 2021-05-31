@@ -3206,6 +3206,21 @@
                 <table class="table">
                     <tr>
                         <td style="border-top: none;">
+                            <a id="fernumbtn"
+                               style="font-size:0.9375rem;cursor: pointer;background:transparent;border:none;">Fermat Numbers</a>
+                        </td>
+                        <td style="float:right;border-top: none;">
+                                <span onclick="addtofavourite('Fermat Numbers','fernum','c','fernumimgfav')"><img
+                                        id="fernumimgfav" src="images/unfavourite.png"
+                                        style="height:1.5625rem;filter: none;"></span>
+                        </td>
+                    </tr>
+                </table>
+            </li>
+            <li>
+                <table class="table">
+                    <tr>
+                        <td style="border-top: none;">
                             <a id="trimornumbtn"
                                style="font-size:0.9375rem;cursor: pointer;background:transparent;border:none;">Trimorphic Number</a>
                         </td>
@@ -40823,6 +40838,31 @@ N is the population size.
         </div>
     </div>
     <!-- Harshad Number end -->
+    <!-- Fermat Numbers start-->
+    <div class="collapse" id="fernum" style="text-align: center;">
+        <div class="container">
+            <h2 style="color: white;font-family:mathfont;text-align: center;">Fermat Numbers</h2>
+            <br>
+            <p>A Cullen Number is a number of the form is 2n * n + 1 where n is an integer.</p>
+            <br>
+            <form action="">
+                <div class="form-group">
+                    <input style="color: white; font-family:mathfont" type="number" id="fern" placeholder="Enter the value of n" class="form__field">
+                </div>
+                <div class="form-group">
+                    <button type="button" class="btn btn-light" onclick="FerNum(document.getElementById('fern').value)">Find</button>
+                    <button type="button" class="btn btn-light" onclick="this.form.reset();">
+                        Reset
+                    </button>
+                </div>
+            </form>
+            <br>
+            <div class="form-group text-center">
+                <p class="stopwrap" style="color:white;" id="ferans"></p><br>
+            </div>
+        </div>
+    </div>
+    <!-- Fermat Numbers end -->
     <!-- Trimorphic Number start-->
     <div class="collapse" id="trimornum" style="text-align: center;">
         <div class="container">

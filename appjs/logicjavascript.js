@@ -28151,3 +28151,32 @@ function CulNum(num){
     ans += `<br> Step 3: Hence the result is: ${(((1 << num) * num) + 1)} `;
     document.getElementById('culans').innerHTML = ans;
 }
+
+function ferpower(x, y)
+{
+    let res = 1;
+    while (y > 0) {
+        if (y & 1)
+            res = res * x;
+        y = y >> 1; 
+        x = x * x;
+    }
+    return res;
+}
+ 
+function Fermat(i)
+{
+    let power2_i = ferpower(2, i);
+    let power2_2_i = ferpower(2, power2_i);
+    return power2_2_i + 1;
+}
+ 
+function Fermat_Number(n)
+{
+    let ans = "";
+    for (let i = 0; i < n; i++)
+        ans+= `${Fermat(i)} ,`;
+    ans = ans.substring(0, s.length - 1);
+    document.getElementById('ferans').innerHTML = "Fermat Numbers: " + ans;
+
+}
